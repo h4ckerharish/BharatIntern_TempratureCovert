@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="website icon" href="logo.png">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Company Logo" width="80" height="80">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://bharatintern.live/b/i/index.html#about" target="_blank">About Us</a></li>
+                <li><a href="https://bharatintern.live/b/i/index.html#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Temperature Converter by Bharat Intern</h1>
+
+    <div id="container">
+        <label for="conversionType">Select Conversion Type:</label>
+        <select id="conversionType" onchange="selectConversionType()">
+            <option value="" disabled selected>Select an option</option>
+            <option value="celsiusToFahrenheit">Celsius to Fahrenheit</option>
+            <option value="fahrenheitToCelsius">Fahrenheit to Celsius</option>
+            <option value="celsiusToKelvin">Celsius to Kelvin</option>
+            <option value="kelvinToCelsius">Kelvin to Celsius</option>
+        </select>
+    <br><br>
+
+        <div id="celsiusToFahrenheit" class="conversion">
+            <label for="celsius">Celsius:</label>
+            <input type="text" id="celsius" placeholder="Enter Celsius" oninput="convertTemperature()">
+            <br><br>
+
+            <label for="fahrenheit">Fahrenheit:</label>
+            <input type="text" id="fahrenheit" placeholder="Result" disabled>
+        </div>
+
+        <div id="fahrenheitToCelsius" class="conversion">
+            <label for="fahrenheitInput">Fahrenheit:</label>
+            <input type="text" id="fahrenheitInput" placeholder="Enter Fahrenheit" oninput="convertTemperature()">
+            <br><br>
+
+            <label for="celsiusResult">Celsius:</label>
+            <input type="text" id="celsiusResult" placeholder="Result" disabled>
+        </div>
+
+        <div id="celsiusToKelvin" class="conversion">
+            <label for="celsiusInput2">Celsius:</label>
+            <input type="text" id="celsiusInput2" placeholder="Enter Celsius" oninput="convertTemperature()">
+            <br><br>
+
+            <label for="kelvinResult">Kelvin:</label>
+            <input type="text" id="kelvinResult" placeholder="Result" disabled>
+        </div>
+
+        <div id="kelvinToCelsius" class="conversion">
+            <label for="kelvinInput">Kelvin:</label>
+            <input type="text" id="kelvinInput" placeholder="Enter Kelvin" oninput="convertTemperature()">
+            <br><br>
+
+            <label for="celsiusResult2">Celsius:</label>
+            <input type="text" id="celsiusResult2" placeholder="Result" disabled>
+        </div>
+
+        <input type="button" value="Clear" onclick="clearFields()">
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
